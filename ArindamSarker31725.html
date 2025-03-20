@@ -37,8 +37,10 @@
 <body>
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYIMMjRzAy89duIvQaz7JroOcNMrEBCAEWLA&s">
   <p>Hi! My name is Arindam, I am a Bangladeshi. Say hello!</p>
+  <p>What is your address?</p>
   <input id="Name" placeholder="Your name">
   <input id="Email" type="email" placeholder="Your email">
+  <input id="Address" placeholder="Your address">
   <input id="submit" type="submit">
   
  <script type="module">
@@ -66,17 +68,20 @@
    const db = getDatabase(app);
    const Name = document.querySelector("#Name") 
    const Email = document.querySelector("#Email")
+   const Address = document.querySelector("#Address")
    document.querySelector('#submit').addEventListener('click', Submit)
 function Submit() {
   const timestamp = buildTimestamp()
   
   set(ref(db, timestamp), {
 	  Name: Name.value,
-      email: Email.value,
+    email: Email.value,
+    address: Address.value, 
   });
 
   Name.value = ""
   Email.value = ""
+  Address.value = ""
 }
 
 

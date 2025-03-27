@@ -73,6 +73,9 @@ small {
 .dessert{
   background-image: url("https://static01.nyt.com/images/2023/10/19/multimedia/ND-Gulab-Jamun-tqgl/ND-Gulab-Jamun-tqgl-superJumbo.jpg");
 }
+.drink{
+  background-image: url("https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2024-08-mango-lassi%2Fmango-lassi-013");
+}
 .price {
   float: right;
 }
@@ -128,6 +131,11 @@ input {
   <p>Gulab Jamun <span class="price">$12</span><br />
   <small>Gulab jamun (also spelled gulaab jamun; lit.'Rose water berry' or 'Rose berry') is a sweet confectionary or dessert, originating in the Indian subcontinent, and a type of mithai popular in India</small></p>
 </div>
+<div class="drink">
+  <input type="number"class="quantities" min="0" style="width: 50px">
+  <p>Mango Lassi <span class="price">$22</span><br />
+  <small>Mango Lassi is a drink made with milk and mango.It is one of the most popular drinks in the indian subcontinent for it's creamy flavor</small></p>
+</div>
   <br><br>
   <input id="Name" placeholder="Your name">
   <input id="Email" type="email" placeholder="Your email">
@@ -164,7 +172,7 @@ input {
      document.querySelector('#submit').addEventListener('click', Submit)
   const quantities = document.querySelectorAll(".quantities")
     const prices = document.querySelectorAll(".price") 
-const itemsList = ["Prawn", "Tikka Masala", "Jamun"]
+const itemsList = ["Prawn", "Tikka Masala", "Jamun", "Mango Lassi"]
   
   function Submit() {
     const timestamp = buildTimestamp()
